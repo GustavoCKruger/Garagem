@@ -9,11 +9,14 @@ from rest_framework.routers import DefaultRouter
 
 from core.views import UserViewSet
 from core.views import AcessorioViewSet
+from core.views import CorViewSet
 
 router = DefaultRouter()
 
 router.register(r'usuarios', UserViewSet, basename='usuarios')
 router.register(r"acessorios", AcessorioViewSet, basename="acessorios")
+router.register(r"cores", CorViewSet, basename="cores")
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
